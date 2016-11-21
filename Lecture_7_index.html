@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML5 Custom Attributes</title>
+  </head>
+  <body>
+    <h1>HTML5 Custom Attributes</h1>
+
+    <div id="target" greeting="hello" ng-app="myTestApp">
+      <section>Section 1
+        <article>Article 1</article>
+      </section>
+    </div>
+    <script>
+      var elem = document.getElementById('target');
+      console.log(elem);
+
+      console.log(elem.getAttribute('greeting'));
+      console.log(elem.getAttribute('ng-app'));
+    // angular uses javascript to find the element you want to bind to a module
+
+      var elem2 = document.querySelector("[ng-app]");
+      console.log(elem2);
+      console.log(elem2.getAttribute('ng-app'));
+      // now we have the DOM element we want to to control
+      // and the name of the function (or module) we want to control it with
+    </script>
+  </body>
+</html>

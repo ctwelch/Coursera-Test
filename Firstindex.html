@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="myFirstApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>My first AngularJS App</title>
+  </head>
+  <body>
+    <h1>My First AngularJS App</h1>
+    <div ng-controller="MyFirstController"><!-- Binding Mechanism allows Declarative Binding -->
+Hey Yo I'm {{name}}
+{{sayHello()}}
+</br>
+<input type="text" ng-model="name">
+</br>
+I can change my name to: {{name}}
+    </div>
+  </body>
+</html>
