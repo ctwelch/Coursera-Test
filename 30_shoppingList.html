@@ -1,0 +1,13 @@
+<h3>{{ list.title }}</h3>
+<ol>
+  <!-- This directive will need an isolate scope with list property  -->
+  <li ng-repeat="item in list.items">
+    {{item.quantity}} of {{ item.name }}
+    <!-- the context here is that of the directive template, which will be -->
+    <button ng-click="list.badRemove($index);">Bad Remove Item</button>
+    <!-- this way we are passing context to the function-instance -->
+    <!-- context will be that of $index, list  -->
+    <button ng-click="list.onRemove({index: $index});">Remove Item</button>
+  </li>
+</ol>
+<div class="error" ng-if="list.cookiesInList();">WARNING! SUGAR KILLS!</div>
